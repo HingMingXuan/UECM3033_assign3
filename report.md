@@ -1,8 +1,8 @@
 UECM3033 Assignment #3 Report
 ========================================================
 
-- Prepared by: ** Put your name here**
-- Tutorial Group: T2/T3
+- Prepared by: ** Hing Ming Xuan**
+- Tutorial Group: T2
 
 --------------------------------------------------------
 
@@ -10,7 +10,7 @@ UECM3033 Assignment #3 Report
 
 The reports, codes and supporting documents are to be uploaded to Github at: 
 
-[https://github.com/your_github_id/UECM3033_assign3](https://github.com/your_github_id/UECM3033_assign3)
+[https://github.com/HingMingXuan/UECM3033_assign3](https://github.com/HingMingXuan/UECM3033_assign3)
 
 
 Explain how you implement your `task1.py` here.
@@ -30,4 +30,4 @@ Is the system of ODE sensitive to initial condition? Explain.
 
 -----------------------------------
 
-<sup>last modified: change your date here</sup>
+<sup>last modified: 16/4/2016</sup>

@@ -6,7 +6,15 @@ import sympy as sy
 # DO NOT CHANGE THE NAME OF gausslegendre() function
 def gausslegendre(f, a, b, n=20):
     ans = 0
-    # Edit here to implement your code
+    # Using the legendre function to obtain the nodes and weights with any n from 1 to 100
+    # x is the nodes, w is the weights
+    x, w = np.polynomial.legendre.leggauss(n)
+    # Transforming the x value into the integral from the interval [-1,1] to [a,b]
+    transformed_x = (b-a)*x/2 + ((b+a)/2)    
+    # The answer is calculated out by using the Gauss-Legendre Quadrature formula
+    # (b-a)/2 is the jacobian of the transformation
+    ans = ((b-a)/2)*sum(w*f(transformed_x))
+
 
     return ans
 
