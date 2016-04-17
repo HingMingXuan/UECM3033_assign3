@@ -24,6 +24,7 @@ to computes the weights(w) and nodes(x) for Gauss-Legendre quadrature by using n
 An integral over [a,b] must be changed into an integral over [-1,1] before applying the the Gaussian quadrature rule.
 The interval transformation can be done in the following equation.
 transformed_x = (b-a)*x/2+((b+a)/2) as show in the task 1.py.
+
 The answer can be calculated out by using the Gauss-Legendre Quadrature formula:
 ans = ((b-a)/2)*sum(w*f(transformed_x)) which (b-a)/2 is the jacobian of the transformation.
 
@@ -38,28 +39,35 @@ The fuction is x,w = np.polynomial.legendre.leggauss(n)
 ## Task 2 -- Predator-prey model
 
 Explain how you implement your `task2.py` here, especially how to use `odeint`.
+
 In task 2, numpy, scipy and matplotlib.pyplot was import from library.
+
 A ODE system (ode) which has 4 parameters (y, t, a, b) is created and the following differential equations is defined in the system.
 dydt = [a*(y0 - y0*y1),b*(-y1+y0*y1)]
+
 The time from 0 to 5 years is defined by using the linspace function to plot the line graph.
 t = np.linspace(0, 5, 200)
 To slove the nonlinear ODE system by using the odeint module in python with the function below.
- sol = odeint(ode, initial_y, t, args=(a,b))
+sol = odeint(ode, initial_y, t, args=(a,b))
 
 Put your graphs here and explain.
 
 ![y against t with initial_y0=0.1.png](y against t with initial_y0=0.1.png)
+
 This is the graph of Prey y0 and Predator y1 againt Year t, where the initial condition is y0 = 0.1, y1 = 1.0.
 The number of prey increase when the number of predator decreases.
 
 ![Predator y1 against Prey y0 with initial_y0=0.1.png](Predator y1 against Prey y0 with initial_y0=0.1.png)
+
 This is the graph of Predator y1 against Prey y0, where the initial condition is y0 = 0.1, y1 = 1.0.
 There is a inverse relationship between y0 and y1.
 
 ![y against t with initial_y0=0.11.png](y against t with initial_y0=0.11.png)
+
 This is the graph of Prey y0 and Predator y1 against Year t, where the initial condition is y0 = 0.11, y1 = 1.0.
 
 ![Predator y1 against Prey y0 with initial_y0=0.11.png](Predator y1 against Prey y0 with initial_y0=0.11.png)
+
 This is the graph of Predator y1 against Prey y0, where the initial condition is y0 = 0.11, y1 = 1.0
 
 Is the system of ODE sensitive to initial condition? Explain.
