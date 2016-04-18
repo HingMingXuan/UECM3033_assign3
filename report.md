@@ -43,11 +43,13 @@ Explain how you implement your `task2.py` here, especially how to use `odeint`.
 In task 2, numpy, scipy and matplotlib.pyplot was import from library.
 
 A ODE system (ode) which has 4 parameters (y, t, a, b) is created and the following differential equations is defined in the system.
+
 dydt = [a*(y0 - y0*y1),b*(-y1+y0*y1)]
 
 The time from 0 to 5 years is defined by using the linspace function to plot the line graph.
 t = np.linspace(0, 5, 200)
 To slove the nonlinear ODE system by using the odeint module in python with the function below.
+
 sol = odeint(ode, initial_y, t, args=(a,b))
 
 Put your graphs here and explain.
