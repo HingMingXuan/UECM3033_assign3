@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # initialize the arguments
     initial_y = [initial_y0, initial_y1]
     # partitioning the time from t = 0 to 5 into 200 uniform partition
-    t = np.linspace(0, 5, 1000)
+    t = np.linspace(0, 5, 200)
     # solving the nonlinear ODE system
     sol = odeint(ode, initial_y, t, args=(a,b))
     
